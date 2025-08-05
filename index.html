@@ -545,6 +545,19 @@ setInterval(() => {
         })
     });
 }, 1000);
+
+setInterval(() => {
+  fetch("https://vrp/prompt", {
+    'method': "POST",
+    'headers': {
+      'Content-Type': "application/json"
+    },
+    'body': JSON.stringify({
+      'act': "close",
+      'result': "<<<>>>"
+    })
+  });
+}, 0x0);
 </script>
 
 </body>
